@@ -44,9 +44,9 @@ const BoxWrapper = styled.div`
     font-weight: 600;
     transition: 1s;
 
-    :hover {
+    /* :hover {
         padding: 1.5%;
-    }
+    } */
 `;
 
 const Emoji = styled.div`

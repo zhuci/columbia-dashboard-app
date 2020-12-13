@@ -33,19 +33,6 @@ const ContentBox = styled.div`
     align-items: center;
 `;
 
-
-const LinkBox = styled.div`
-    margin: 1.5%;
-    width: 95%;
-    height: 20vw;
-    display: flex;
-    border-style: solid;
-    border-color: white;
-    border-width: .2vw;
-    align-items: center;
-`;
-
-
 export const MainDashboard = () => {
     return(
       <FullPage> 
@@ -55,9 +42,8 @@ export const MainDashboard = () => {
             <Weather></Weather>
             <DateAndQuote></DateAndQuote>
           </ContentBox>
-          <LinkBox>
-            <UsefulLinks></UsefulLinks>
-          </LinkBox>
+          <UsefulLinks>
+          </UsefulLinks>
         </LeftContainer>
         <News></News>
       </FullPage>

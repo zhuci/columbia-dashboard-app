@@ -34,7 +34,7 @@ const Logo = styled.div`
 `;
 
 const Text = styled.div`
-    color: black;
+    color: white;
     margin-left: 30px;
     font-weight: 700;
     font-size: 3vw;
