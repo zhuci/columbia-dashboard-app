@@ -7,7 +7,14 @@ var url = 'http://newsapi.org/v2/top-headlines?' +
           'apiKey=a0031dc43da443b4b59015dc0fd285ac';
 
 var req = new Request(url);
-fetch(req)
+//weather api 
+var API_key = '24d935cd21f75fb2c6d74e913dd257cf';
+var city_name = 'New York City, US';
+var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=London&appid=24d935cd21f75fb2c6d74e913dd257cf';//'api.openweathermap.org/data/2.5/weather?q='+ {city_name} + '&appid='+ {API_key};
+var wReq = new Request(weatherUrl);
+
+
+fetch(wReq)
     .then(function(response) {
         console.log(response.json());
     })
