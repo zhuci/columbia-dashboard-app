@@ -1,6 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
+
+//weather api 
+var API_key = '24d935cd21f75fb2c6d74e913dd257cf';
+var city_name = 'New York City, US';
+var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=London&appid=24d935cd21f75fb2c6d74e913dd257cf';//'api.openweathermap.org/data/2.5/weather?q='+ {city_name} + '&appid='+ {API_key};
+var wReq = new Request(weatherUrl);
+var weather;
+
+
+fetch(wReq)
+    .then(function(response) {
+      weather = response.json();
+    })
+
+console.log(weather);
+
+
 export const Weather = () => {
     return(
         <BoxWrapper>
