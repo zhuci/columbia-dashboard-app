@@ -30,9 +30,13 @@ const LinkBox = styled.a`
         width: 24vw;
         height: 3.3vw;
         font-size: 2.2vw;
-        color: #6805a6;
+        color: #1d26a8;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: .7vw;
     }
 `
+
 const BoxWrapper = styled.div`
     display: flex;
     align-items: center;

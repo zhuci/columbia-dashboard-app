@@ -17,9 +17,9 @@ const FullPage = styled.div`
 const LeftContainer = styled.div`
     display: flex;
     width: 70%;
-    border-style: solid;
+    /* border-style: solid;
     border-color: white;
-    border-width: .2vw;
+    border-width: .2vw; */
     flex-direction: column;
 `;
 
@@ -27,9 +27,9 @@ const ContentBox = styled.div`
     margin: 1.5%;
     width: 95%;
     display: flex;
-    border-style: solid;
+    /* border-style: solid;
     border-color: white;
-    border-width: .2vw;
+    border-width: .2vw; */
     align-items: center;
 `;
 
