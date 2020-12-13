@@ -4,35 +4,38 @@ import styled from "styled-components";
 export const Greeting = () => {
     return(
       <BoxWrapper>
-          <Emoji>🦁</Emoji>
-          <Text>Good Afternoon!</Text>
+          <Logo>
+          <a href="https://ibb.co/f1J6fz8">
+              <img src="https://i.ibb.co/Vj6nRcH/CU-Insignia.png" alt="CU-Insignia" border="0" height="50">
+              </img>
+            </a>
+            </Logo>
+          <Text>Good Evening, Columbia!</Text>
       </BoxWrapper>
     );
 };
 
-
 const BoxWrapper = styled.div`
-    margin: 20px;
-    padding: 10px;
-    width: 25%;
-    background-color: white;
-    border-radius: 10px;
+    margin: 1.5%;
+    padding: 2%;
+    width: 70%;
     display: flex;
-    box-shadow: 0px 0px 15px 0px #C1C1C1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px red;
     align-items: center;
+    justify-content: center;
 `;
 
-const Emoji = styled.div`
-    margin: 10px 10px 10px 20px;
-    font-size: 30px;
+const Logo = styled.div`
+    padding: 1.3vw;
+    padding-bottom: .6vw;
+    background-color: white;
+    border-radius: 3vw;
 `;
 
 const Text = styled.div`
     color: black;
-    margin: 10px;
-    font-weight: 600;
-    font-size: 30px;
-
-
-
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 3vw;
 `;

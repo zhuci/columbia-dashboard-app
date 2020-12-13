@@ -12,7 +12,7 @@ const IconTitle = styled.h1`
     
 `
 
-export const UsefulLink = ({Link}) => {
+export const UsefulLinks = ({Link}) => {
     return (
         <LinkBox>
             <IconTitle>{Link}</IconTitle>

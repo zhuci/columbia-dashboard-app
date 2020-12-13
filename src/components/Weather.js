@@ -4,44 +4,49 @@ import styled from "styled-components";
 export const Weather = () => {
     return(
         <BoxWrapper>
-            <Emoji>☁️</Emoji>
+            <a href="https://imgbb.com/"><img src="https://i.ibb.co/9wmsgwJ/cloudicon.png" alt="cloudicon" border="0" height="100"></img></a>
             <Text>58°</Text>
             <Location> 📌 New York, NY</Location>
             <Temp>
                 <High>
-                    <div>63°</div>
+                    <HighTemp>63°</HighTemp>
                     <div>HIGH</div>
                 </High>
                 <High>
-                    <div>55°</div>
+                    <HighTemp>55°</HighTemp>
                     <div>LOW</div>
                 </High>
-          </Temp>
-          <Sunset> 
-              <Time>
+            </Temp>
+            <Sunset> 
+                 <Time>
                     🌅 6:43 AM 
-              </Time> 
-              <Time>
-                    🌇4:38 PM
-              </Time>
-          </Sunset>
+                 </Time> 
+                 <Time>
+                    🌇 4:38 PM
+                 </Time>
+            </Sunset>
       </BoxWrapper>
     );
 };
 
 
 const BoxWrapper = styled.div`
-    margin: 20px;
-    padding: 10px;
-    width: 25%;
+    padding: 2%;
+    width: 35%;
+    height: 90%;
     background-color: white;
     border-radius: 10px;
     display: flex;
-    box-shadow: 0px 0px 15px 0px #C1C1C1;
+    box-shadow: 0px 0px 15px 0px #707887;
     align-items: center;
     flex-direction: column;
     color: black;
     font-weight: 600;
+    transition: 1s;
+
+    :hover {
+        padding: 1.5%;
+    }
 `;
 
 const Emoji = styled.div`
@@ -51,40 +56,48 @@ const Emoji = styled.div`
 const Text = styled.div`
     color: black;
     margin: 10px;
-    font-weight: 600;
-    font-size: 30px;
-
-
+    font-weight: 800;
+    font-size: 5vw;
+    padding-left: 1vw;
 `;
 
 const Location = styled.div`
-font-size: 20px;
+font-size: 2vw;
 
 `
 const Temp = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: center;
     color: black;
     margin: 10px;
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 1.5vw;
 
 `
 
 const High = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    justify-content: center;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: .7vw;
+`
+
+const HighTemp = styled.div`
+    padding-left: .2vw;
+    font-size: 2.2vw;
 `
 
 const Sunset = styled.div`
     display: flex;
-    flex-direction: time;
+    flex-direction: row;
 `
 
 const Time = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 10px;
-    font-size: 20px;
+    margin: 1vw;
+    font-size: 1.5vw;
 `
