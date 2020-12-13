@@ -17,9 +17,9 @@ const FullPage = styled.div`
 const LeftContainer = styled.div`
     display: flex;
     width: 70%;
-    border-style: solid;
+    /* border-style: solid;
     border-color: white;
-    border-width: .2vw;
+    border-width: .2vw; */
     flex-direction: column;
 `;
 
@@ -27,24 +27,11 @@ const ContentBox = styled.div`
     margin: 1.5%;
     width: 95%;
     display: flex;
-    border-style: solid;
+    /* border-style: solid;
     border-color: white;
-    border-width: .2vw;
+    border-width: .2vw; */
     align-items: center;
 `;
-
-
-const LinkBox = styled.div`
-    margin: 1.5%;
-    width: 95%;
-    height: 20vw;
-    display: flex;
-    border-style: solid;
-    border-color: white;
-    border-width: .2vw;
-    align-items: center;
-`;
-
 
 export const MainDashboard = () => {
     return(
@@ -55,9 +42,8 @@ export const MainDashboard = () => {
             <Weather></Weather>
             <DateAndQuote></DateAndQuote>
           </ContentBox>
-          <LinkBox>
-            <UsefulLinks></UsefulLinks>
-          </LinkBox>
+          <UsefulLinks>
+          </UsefulLinks>
         </LeftContainer>
         <News></News>
       </FullPage>

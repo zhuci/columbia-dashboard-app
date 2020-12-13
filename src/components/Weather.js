@@ -50,7 +50,7 @@ export const Weather = () => {
 const BoxWrapper = styled.div`
     padding: 2%;
     width: 35%;
-    height: 90%;
+    height: 80%;
     background-color: white;
     border-radius: 10px;
     display: flex;
@@ -59,15 +59,14 @@ const BoxWrapper = styled.div`
     flex-direction: column;
     color: black;
     font-weight: 600;
-    transition: 1s;
+    transition: .7s;
+    margin: 1.5vw;
 
     :hover {
-        padding: 1.5%;
+        width: 37%;
+        height: 82%;
+        margin: .95vw;
     }
-`;
-
-const Emoji = styled.div`
-    font-size: 100px;
 `;
 
 const Text = styled.div`
@@ -116,5 +115,5 @@ const Time = styled.div`
     display: flex;
     flex-direction: row;
     margin: 1vw;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 `

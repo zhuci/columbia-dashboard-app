@@ -21,7 +21,7 @@ const BoxWrapper = styled.div`
     width: 70%;
     display: flex;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px 0px red;
+    /* box-shadow: 0px 0px 15px 0px red; */
     align-items: center;
     justify-content: center;
 `;
@@ -34,7 +34,7 @@ const Logo = styled.div`
 `;
 
 const Text = styled.div`
-    color: black;
+    color: white;
     margin-left: 30px;
     font-weight: 700;
     font-size: 3vw;
