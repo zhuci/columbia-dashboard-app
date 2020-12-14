@@ -3,7 +3,7 @@ import { UsefulLinks } from '../components/UsefulLinks';
 import { Greeting } from "../components/Greeting";
 import { Weather } from '../components/Weather';
 import News from '../components/News';
-import { DateAndQuote } from '../components/DateAndQuote';
+import DateAndQuote  from '../components/DateAndQuote';
 import styled from "styled-components";
 
 

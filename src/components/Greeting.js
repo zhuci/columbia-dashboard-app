@@ -20,7 +20,7 @@ const BoxWrapper = styled.div`
     padding: 2%;
     width: 70%;
     display: flex;
-    border-radius: 10px;
+    border-radius: 1vw;
     /* box-shadow: 0px 0px 15px 0px red; */
     align-items: center;
     justify-content: center;

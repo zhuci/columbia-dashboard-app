@@ -3,115 +3,116 @@ import styled from "styled-components";
 
 const BoxWrapper = styled.div`
     margin: 1.5%;
-    padding: 2%;
     width: 30%;
-    height: 70vw;
-    display: flex;
+    height: 53vw;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 15px 0px #707887;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    transition: .7s;
+
+    :hover {
+        width: 31%;
+        height: 53.5vw;
+        margin: 1%;
+    }
 `;
 
-const NewsTitle = styled.h5`
+const ContainerTitle = styled.p`
     color: black;
-    margin-left: 30px;
     font-weight: 700;
     font-size: 3vw;
+    /* transform: translate(0, -1vw); */
 `;
 
-const ArticleTitle = styled.a`
-    position: absolute; 
-    bottom: 10%;
-    margin: 3%;
+const Article = styled.a`
+    margin: 1vw;
+    margin-right: 2vw;
     width: 30vw;
-    color: #3CABDB;
+    height: 5vw;
+    color: #7b7c8a;
+    display: flex;
+    flex-direction: row;
+
 `;
 
-// export const News = () => {
-//     return(
-//       <BoxWrapper>
-//           <Text>Insert News Here</Text>
-//       </BoxWrapper>
-//     );
-// };
+const ArticleImage = styled.img`
+    border-radius: 1vw;
+    width: 4.6vw;
+    height: 4vw;
+    border: solid black 2px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+`;
 
-//google news api test
-// fetch(req)
-//     .then((response) => response.json())
-//     .then(function(data) {
-//         console.log(response.json());
-        
-//     })
-var newsArticles;
-
-async function searchNews() {
-    const response = await fetch("https://google-news.p.rapidapi.com/v1/topic_headlines?lang=en&country=US", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-key": "33466b19cemsh35ff737ca90b06ap15a102jsn10fac9043e75",
-            "x-rapidapi-host": "google-news.p.rapidapi.com"
-        }
-    });    
-    const body = await response.json();
-    console.log(body)
-    return body.value;
-  }
+const ArticleTitle = styled.div`
+    width: 26vw;
+    height: auto;
+    font-size: 1.2vw;
+    margin-left: 1vw;
+    margin-right: .3vw;
+`;
 
 
 
 class News extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //       error: null,
-    //       isLoaded: false,
-    //       items: []
-    //     };
-    //   }
+    state = {
+        loading: true,
+        articles: null
+      };
+    
+    async componentDidMount() {
+        var url = 'http://newsapi.org/v2/top-headlines?' +
+          'country=us&' +
+          'apiKey=a0031dc43da443b4b59015dc0fd285ac';
+        const response = await fetch(url);
+        const data = await response.json();
+        this.setState({ articles: data.articles, loading: false });
+        console.log(data);
+    }  
 
-    // componentDidMount() {
-    //     fetch("https://api.example.com/items")
-    //         .then(res => res.json())
-    //         .then(
-    //             (result) => {
-    //                 this.setState({
-    //                     isLoaded: true,
-    //                     items: result.items
-    //                   });
-    //             },
-    //             (error) => {
-    //                 this.setState({
-    //                   isLoaded: true,
-    //                   error
-    //                 });
-    //               }
-    //         )
-    // }
-
-    // render() {
-    //     var url = 'http://newsapi.org/v2/top-headlines?' +
-    //       'country=us&' +
-    //       'apiKey=a0031dc43da443b4b59015dc0fd285ac';
-    //     var req = new Request(url);
-
-    //     fetch(url).then((res)=>{
-    //         return res.json()
-    //     }).then((data)=>{
-    //         newsArticles = data.articles;
-    //         //console.log(newsArticles[0].url);
-    //         //console.log(newsArticles[0].title)
-
-    //     })
-        render() {
-            return(
-                <BoxWrapper>
-                    <NewsTitle>Top News in US</NewsTitle>
-                    <ArticleTitle href = {newsArticles.article[0].link}> {newsArticles.article[0].title} </ArticleTitle>
-                    <ArticleTitle href = "https://www.cnn.com/2020/12/13/us/spacex-falcon-9-launch/index.html"> SpaceX Falcon 9 launches and deploys satellite, days after another rocket crashed in Texas - CNN </ArticleTitle>
-                </BoxWrapper> 
-            );
+    render() {
+        if (this.state.loading) {
+          return <div>loading...</div>;
+        }
+    
+        if (!this.state.articles) {
+          return <div>didn't get any articles</div>;
+        }
+    
+        return(
+            <BoxWrapper>
+                <ContainerTitle>Top News in US</ContainerTitle>
+                <Article href = {this.state.articles[0].url}>
+                    <ArticleImage href={this.state.articles[0].urlToImage}></ArticleImage>
+                    <ArticleTitle>{this.state.articles[0].title}</ArticleTitle>
+                </Article>
+                <Article href = {this.state.articles[1].url}>
+                    <ArticleImage href={this.state.articles[1].urlToImage}></ArticleImage>
+                    <ArticleTitle>{this.state.articles[1].title}</ArticleTitle>
+                </Article>
+                <Article href = {this.state.articles[2].url}>
+                    <ArticleImage href={this.state.articles[2].urlToImage}></ArticleImage>
+                    <ArticleTitle>{this.state.articles[2].title}</ArticleTitle>
+                </Article>
+                <Article href = {this.state.articles[3].url}>
+                    <ArticleImage href={this.state.articles[3].urlToImage}></ArticleImage>
+                    <ArticleTitle>{this.state.articles[3].title}</ArticleTitle>
+                </Article>
+                <Article href = {this.state.articles[4].url}>
+                    <ArticleImage href={this.state.articles[4].urlToImage}></ArticleImage>
+                    <ArticleTitle>{this.state.articles[4].title}</ArticleTitle>
+                </Article>
+                <Article href = {this.state.articles[5].url}>
+                    <ArticleImage href={this.state.articles[5].urlToImage}></ArticleImage>
+                    <ArticleTitle>{this.state.articles[5].title}</ArticleTitle>
+                </Article>
+            </BoxWrapper>
+        );
     }
 
 
@@ -119,7 +120,7 @@ class News extends Component {
     //     <BoxWrapper>
     //         <NewsTitle>Top News Today in the US</NewsTitle>
     //         <ArticleTitle href = "https://www.cnn.com/2020/12/13/us/spacex-falcon-9-launch/index.html"> SpaceX Falcon 9 launches and deploys satellite, days after another rocket crashed in Texas - CNN </ArticleTitle>
-    //     </BoxWrapper> 
+    //     </BoxWrapper>
     // );
 }
 
