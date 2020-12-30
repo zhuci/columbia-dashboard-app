@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/columbia-dashboard-app/static/css/main.2ae47eeb.chunk.css",
+    "main.js": "/columbia-dashboard-app/static/js/main.f53dd6db.chunk.js",
+    "main.js.map": "/columbia-dashboard-app/static/js/main.f53dd6db.chunk.js.map",
+    "runtime-main.js": "/columbia-dashboard-app/static/js/runtime-main.600f2f3a.js",
+    "runtime-main.js.map": "/columbia-dashboard-app/static/js/runtime-main.600f2f3a.js.map",
+    "static/js/2.f2666a43.chunk.js": "/columbia-dashboard-app/static/js/2.f2666a43.chunk.js",
+    "static/js/2.f2666a43.chunk.js.map": "/columbia-dashboard-app/static/js/2.f2666a43.chunk.js.map",
+    "static/js/3.40f7e0e1.chunk.js": "/columbia-dashboard-app/static/js/3.40f7e0e1.chunk.js",
+    "static/js/3.40f7e0e1.chunk.js.map": "/columbia-dashboard-app/static/js/3.40f7e0e1.chunk.js.map",
+    "index.html": "/columbia-dashboard-app/index.html",
+    "static/css/main.2ae47eeb.chunk.css.map": "/columbia-dashboard-app/static/css/main.2ae47eeb.chunk.css.map",
+    "static/js/2.f2666a43.chunk.js.LICENSE.txt": "/columbia-dashboard-app/static/js/2.f2666a43.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.600f2f3a.js",
+    "static/js/2.f2666a43.chunk.js",
+    "static/css/main.2ae47eeb.chunk.css",
+    "static/js/main.f53dd6db.chunk.js"
+  ]
+}
